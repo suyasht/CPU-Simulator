@@ -1,0 +1,20 @@
+What is Forwarding?
+
+Forwarding is a process that is used to remove the blank cycles that occur due to stall.
+Whenever there is a stall, we check the resgiter for which the stall has occurred and we 
+check where that particular register is in the pipeline currently and directly assign the value from there.
+Thereby, getting rid of the balnk cycles and improving the performance of the code. 
+
+For Ex:
+
+MOVC R1 2
+ADD R1 R1 1
+
+Here, the MOVC instruction moves 2 in R1 in execute and ADD cannot use that untill the writeback stage is executed.
+To resolve this, by using forwaring, we can get the value of R1 directly to the next instruction as a source thereby getting
+rid of the blank cycles.  
+
+
+Difference between Cycles in HW1 and HW2.
+
+Unable to get the complete output.
